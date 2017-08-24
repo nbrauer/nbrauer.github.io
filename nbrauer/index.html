@@ -5,7 +5,10 @@ window.onload = function() {
 const queryParams = new URLSearchParams(window.location.search);
 let delay = queryParams.get('delay') || 0;
 
-setTimeout(() => { window.close();}, delay)
+setTimeout(() => {
+        console.log("Closing Window"); 
+	window.close();
+	}, delay);
 }
 
 </script>
