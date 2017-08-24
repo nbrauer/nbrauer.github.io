@@ -2,7 +2,10 @@
 <head>
 <script>
 window.onload = function() {
-window.close();
+const queryParams = new URLSearchParams(window.location.search);
+let delay = queryParams.get('delay') || 0;
+
+setTimeout(() => { window.close();}, delay)
 }
 
 </script>
